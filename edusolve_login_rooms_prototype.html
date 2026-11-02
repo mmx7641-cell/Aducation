@@ -1,89 +1,129 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EduSolve</title>
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EduSolve</title>
 <style>
 :root{--bg:#f4f6fb;--card:#fff;--txt:#1c2740;--muted:#718096;--line:#e1e7f0;--pri:#5146e5;--soft:#efefff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font-family:Tahoma,Arial}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}.side{background:#171e36;color:#fff;padding:20px 13px}.brand{font-size:23px;font-weight:bold;padding:8px 12px 24px}.brand small{display:block;font-size:11px;color:#aab4d0;font-weight:normal}.nav{display:grid;gap:6px}.nav button{border:0;background:transparent;color:#c4cce2;text-align:right;padding:13px;border-radius:10px}.nav button.active,.nav button:hover{background:#303958;color:white}.main{min-width:0}.top{height:68px;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px}.top h1{font-size:20px}.content{max-width:1150px;margin:auto;padding:24px}.page{display:none}.page.active{display:block}.hero{padding:28px;border-radius:18px;color:white;background:linear-gradient(120deg,#282d72,#574de0,#2687b8);display:flex;justify-content:space-between;align-items:center;gap:20px}.hero h2{font-size:32px;margin:0 0 8px}.hero p{line-height:1.8;color:#e2e6ff}.card,.stat{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px;margin-top:16px;box-shadow:0 8px 24px #1725540b}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{display:flex;align-items:center;gap:12px}.stat strong{display:block;font-size:23px}.muted{color:var(--muted);font-size:13px}.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:bold}.primary{background:var(--pri);color:white}.light{background:var(--soft);color:var(--pri)}.outline{background:var(--card);border:1px solid var(--line);color:var(--txt)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.quickgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.quick{border:1px solid var(--line);padding:15px;border-radius:12px;cursor:pointer}.quick:hover{background:var(--soft)}.quick b{display:block;margin:7px 0}.field{display:grid;gap:7px;margin:12px 0}.field label{font-size:14px;font-weight:bold}.field input,.field textarea,.field select{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--txt)}textarea{min-height:105px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.answer{display:none;white-space:pre-wrap;line-height:1.9;background:var(--soft);padding:14px;border-radius:12px;margin-top:14px}.answer.show{display:block}.note{padding:12px;border-radius:10px;background:#fff4d6;color:#745819;font-size:12px;line-height:1.7;margin-top:14px}.chatlayout{display:grid;grid-template-columns:245px 1fr;gap:14px}.groupbtn{display:block;width:100%;text-align:right;padding:12px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:10px;margin:8px 0}.groupbtn.active{background:var(--soft);border-color:#9b95ff}.chat{display:flex;flex-direction:column;min-height:480px}.chathead{border-bottom:1px solid var(--line);padding-bottom:12px}.messages{flex:1;min-height:300px;max-height:440px;overflow:auto;display:flex;flex-direction:column;gap:10px;padding:14px 0}.bubble{background:var(--soft);padding:10px 12px;border-radius:12px;max-width:82%;align-self:flex-start;white-space:pre-wrap;overflow-wrap:anywhere}.bubble.mine{align-self:flex-end;background:var(--pri);color:#fff}.bubble small{display:block;font-size:10px;opacity:.7;margin-top:4px}.send{display:flex;gap:8px;border-top:1px solid var(--line);padding-top:12px}.send input{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--card);color:var(--txt)}.footer{text-align:center;padding:24px;color:var(--muted);font-size:12px}body.dark{--bg:#101624;--card:#1a2438;--txt:#eff3ff;--muted:#a7b2c7;--line:#303c52;--soft:#2a3155}body.dark .note{background:#332d1d;color:#f4dfa0}
 @media(max-width:850px){.app{grid-template-columns:75px 1fr}.side{padding:15px 7px}.brand{font-size:0;padding:8px 4px 20px}.brand:after{content:'✦';font-size:25px}.brand small{display:none}.nav button{font-size:0;text-align:center;padding:13px 3px}.nav button:before{font-size:19px}.nav button[data-page=home]:before{content:'🏠'}.nav button[data-page=ai]:before{content:'🤖'}.nav button[data-page=groups]:before{content:'👥'}.nav button[data-page=study]:before{content:'📚'}.nav button[data-page=profile]:before{content:'👤'}.grid{grid-template-columns:1fr}.chatlayout{grid-template-columns:1fr}.group-list{display:flex;overflow:auto;gap:8px}.groupbtn{min-width:160px}.content{padding:14px}.hero h2{font-size:25px}.stats{grid-template-columns:1fr}.quickgrid{grid-template-columns:1fr}}@media(max-width:520px){.app{display:block}.side{position:fixed;bottom:0;left:0;right:0;height:60px;z-index:4;padding:4px}.brand{display:none}.nav{display:flex;height:100%;justify-content:space-around}.nav button{flex:1;padding:8px 1px}.top{height:58px;padding:0 12px}.top h1{font-size:17px}.content{padding-bottom:76px}.hero{padding:20px}.hero h2{font-size:23px}.hero .symbol{display:none}.row{grid-template-columns:1fr}.card{padding:14px}}
-
-.authwrap{max-width:560px;margin:32px auto}.authcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 12px 32px #17255412}.authproviders{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.provider{border:1px solid var(--line);border-radius:11px;background:var(--card);color:var(--txt);padding:12px;font-weight:bold}.authgate{position:fixed;inset:0;background:var(--bg);z-index:30;overflow:auto;padding:18px}.authgate.hidden{display:none}.codebox{display:flex;gap:8px}.codebox input{flex:1;min-width:0}.roomtools{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.authwrap{max-width:560px;margin:32px auto}.authcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 12px 32px #17255412}.authproviders{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.provider{border:1px solid var(--line);border-radius:11px;background:var(--card);color:var(--txt);padding:12px;font-weight:bold}.authgate{position:fixed;inset:0;background:var(--bg);z-index:30;overflow:auto;padding:18px}.authgate.hidden{display:none}
 </style></head><body>
 <div class="authgate" id="authgate">
  <div class="authwrap"><div class="authcard">
   <div style="text-align:center;font-size:38px">✦</div><h1 style="text-align:center;margin:4px 0">EduSolve</h1>
   <p class="muted" style="text-align:center">سجّل دخولك عشان تذاكر وتتواصل مع مجموعتك</p>
   <div class="authproviders">
-   <button class="provider" onclick="providerInfo('Google')">🌐 Google</button>
-   <button class="provider" onclick="providerInfo('Facebook')">🔵 Facebook</button>
-   <button class="provider" onclick="providerInfo('X')">𝕏 تسجيل بـ X</button>
-   <button class="provider" onclick="providerInfo('البريد الإلكتروني')">✉️ البريد الإلكتروني</button>
+   <button class="provider" onclick="loginGoogle()">🌐 Google</button>
+   <button class="provider" onclick="alert('فعل Facebook من Firebase Console > Authentication > Sign-in method')">🔵 Facebook</button>
+   <button class="provider" onclick="alert('فعل Twitter/X من Firebase Console')">𝕏 تسجيل بـ X</button>
+   <button class="provider" onclick="document.getElementById('emailBox').scrollIntoView()">✉️ البريد الإلكتروني</button>
   </div>
-  <div class="field"><label>اسمك</label><input id="loginname" maxlength="35" placeholder="اكتب اسمك"></div>
-  <div class="field"><label>البريد الإلكتروني (للتجربة)</label><input id="loginemail" type="email" placeholder="name@example.com"></div>
-  <button class="btn primary" style="width:100%" onclick="demoRequest()">إنشاء حساب تجريبي / متابعة</button>
-  <div id="approvalarea" style="display:none">
-   <div class="note">حسابك في انتظار الموافقة. ابعت طلب التفعيل للمسؤول عبر واتساب، وبعد ما يرسل لك الكود اكتبه هنا.</div>
-   <button class="btn light" style="width:100%;margin:10px 0" onclick="whatsappRequest()">📱 طلب كود عبر واتساب</button>
-   <div class="field"><label>كود الموافقة</label><input id="approvalcode" inputmode="numeric" placeholder="أدخل الكود الذي وصلك"></div>
-   <button class="btn primary" style="width:100%" onclick="demoApprove()">تحقق من الكود</button>
+  <div id="emailBox">
+  <div class="field"><label>البريد الإلكتروني</label><input id="loginemail" type="email" placeholder="name@example.com"></div>
+  <div class="field"><label>كلمة المرور</label><input id="loginpass" type="password" placeholder="******"></div>
+  <div style="display:flex;gap:8px">
+  <button class="btn primary" style="flex:1" onclick="loginEmail()">دخول</button>
+  <button class="btn light" style="flex:1" onclick="registerEmail()">إنشاء حساب</button>
   </div>
-  <div class="note">هذه واجهة تجريبية فقط: أزرار Google وFacebook وX والبريد لن تنشئ حسابات حقيقية قبل إعداد Firebase. لا تستخدم بيانات حقيقية أو كلمات مرور في النسخة التجريبية.</div>
+  </div>
+  <p id="authError" class="muted" style="color:red;text-align:center;margin-top:10px"></p>
+  <div class="note">تم ربط الموقع بـ Firebase مشروع aducation-e5275 وجاهز للعمل على GitHub Pages.</div>
  </div></div>
 </div>
-<div class="app"><aside class="side"><div class="brand">EduSolve<small>نتعلّم مع بعض</small></div><nav class="nav"><button class="active" data-page="home">🏠 الرئيسية</button><button data-page="ai">🤖 المساعد الذكي</button><button data-page="groups">👥 مجموعاتي</button><button data-page="study">📚 المذاكرة</button><button data-page="profile">👤 حسابي</button></nav></aside><div class="main"><header class="top"><h1 id="title">الرئيسية</h1><button class="btn outline" onclick="theme()">🌙</button></header><main class="content">
-<section class="page active" id="home"><div class="hero"><div><h2>أهلًا بيك في EduSolve 👋</h2><p>افهم دروسك، اسأل المساعد التعليمي،<br>وحل مع أصحابك في مجموعات مذاكرة.</p><button class="btn" style="background:white;color:#4038a8" onclick="page('ai')">اسأل المساعد 🤖</button> <button class="btn" style="background:#ffffff22;color:white;border:1px solid #ffffff55" onclick="page('groups')">مجموعاتي 👥</button></div><div class="symbol" style="font-size:75px">🎓</div></div><div class="stats"><div class="stat"><span style="font-size:25px">👥</span><div><strong id="gc">0</strong><span class="muted">مجموعات محلية</span></div></div><div class="stat"><span style="font-size:25px">💬</span><div><strong id="mc">0</strong><span class="muted">رسائل محفوظة</span></div></div><div class="stat"><span style="font-size:25px">✨</span><div><strong id="ac">0</strong><span class="muted">أسئلة للمساعد</span></div></div></div><div class="card"><h2>ابدأ بسرعة</h2><div class="quickgrid"><div class="quick" onclick="page('ai')"><span style="font-size:24px">🧠</span><b>افهم سؤال</b><span class="muted">اطلب شرحًا مبسطًا.</span></div><div class="quick" onclick="page('groups')"><span style="font-size:24px">🫂</span><b>اعمل مجموعة</b><span class="muted">ذاكر مع أصحابك.</span></div><div class="quick" onclick="page('study')"><span style="font-size:24px">📝</span><b>اختبر نفسك</b><span class="muted">تدريب وتصحيح فوري.</span></div></div></div><div class="note">مهم: المجموعات والرسائل في النسخة الحالية محفوظة على نفس الجهاز فقط. لتواصل حقيقي بين أجهزتك وأجهزة أصحابك، نحتاج ربط Firebase أو خادم أونلاين.</div></section>
-<section class="page" id="ai"><div class="grid"><div class="card"><h2>🤖 المساعد التعليمي</h2><p class="muted">اكتب سؤالك واطلب شرح الفكرة، مش الإجابة بس.</p><div class="row"><div class="field"><label>المادة</label><select id="sub"><option>رياضيات</option><option>علوم</option><option>لغة عربية</option><option>برمجة</option><option>لغة إنجليزية</option><option>مادة أخرى</option></select></div><div class="field"><label>مستوى الشرح</label><select id="level"><option>بسيط جدًا</option><option selected>مناسب للإعدادي</option><option>تفصيلي</option></select></div></div><div class="field"><label>السؤال</label><textarea id="question" placeholder="مثال: مش فاهم الفرق بين التبخر والغليان..."></textarea></div><button class="btn primary" onclick="ask()">اشرح لي 💡</button><div class="answer" id="ans"></div><div class="note">المساعد هنا تجريبي بأمثلة محدودة، وليس متصلًا بنموذج ذكاء اصطناعي حقيقي حتى الآن.</div></div><div class="card"><h2>💡 عشان تفهم أسرع</h2><p>١. اكتب السؤال كاملًا.</p><p>٢. وضّح الجزء اللي مش فاهمه.</p><p>٣. اطلب مثالًا مشابهًا.</p><p>٤. جرّب تحل بنفسك بعد الشرح.</p><button class="btn light" onclick="page('study')">اذهب للتدريبات ←</button></div></div></section>
-<section class="page" id="groups"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div><h2>👥 مجموعات المذاكرة</h2><p class="muted">أنشئ مجموعة تجريبية وابدأ محادثة محلية.</p></div><button class="btn primary" onclick="modal('create')">＋ إنشاء مجموعة</button></div><div class="chatlayout"><div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><h3>مجموعاتي</h3><button class="btn light" onclick="modal('join')">انضمام</button></div><div id="grouplist" class="group-list"></div><p class="muted">المجموعات هنا تجريبية على نفس المتصفح.</p></div><div class="card chat"><div class="chathead" id="chathead"><b>اختار مجموعة</b><div class="muted">رسائل المذاكرة</div></div><div class="messages" id="messages"><div class="muted">أنشئ مجموعة لتبدأ.</div></div><form class="send" id="sendform"><input id="msg" placeholder="اكتب رسالة..." disabled><button id="sendbtn" class="btn primary" disabled>إرسال</button></form></div></div><div class="card" id="modal" style="display:none"><h3 id="modtitle">إنشاء مجموعة</h3><div class="field"><label>اسم المجموعة</label><input id="gname" placeholder="مثال: مذاكرة علوم"></div><div class="field"><label>المادة</label><select id="gsubject"><option>عام</option><option>رياضيات</option><option>علوم</option><option>لغة عربية</option><option>برمجة</option><option>لغة إنجليزية</option></select></div><button id="modconfirm" class="btn primary">إنشاء</button> <button class="btn outline" onclick="closeModal()">إلغاء</button><p class="muted" id="modhint">المجموعة محلية في هذا الجهاز.</p></div></section>
+
+<div class="app"><aside class="side"><div class="brand">EduSolve<small>نتعلّم مع بعض</small></div><nav class="nav"><button class="active" data-page="home">🏠 الرئيسية</button><button data-page="ai">🤖 المساعد الذكي</button><button data-page="groups">👥 مجموعاتي</button><button data-page="study">📚 المذاكرة</button><button data-page="profile">👤 حسابي</button></nav></aside><div class="main"><header class="top"><h1 id="title">الرئيسية</h1><div style="display:flex;gap:8px"><button class="btn outline" onclick="theme()">🌙</button><button class="btn outline" onclick="logout()">خروج</button></div></header><main class="content">
+<section class="page active" id="home"><div class="hero"><div><h2 id="welcomeText">أهلًا بيك في EduSolve 👋</h2><p>افهم دروسك، اسأل المساعد التعليمي،<br>وحل مع أصحابك في مجموعات مذاكرة.</p><button class="btn" style="background:white;color:#4038a8" onclick="page('ai')">اسأل المساعد 🤖</button> <button class="btn" style="background:#ffffff22;color:white;border:1px solid #ffffff55" onclick="page('groups')">مجموعاتي 👥</button></div><div class="symbol" style="font-size:75px">🎓</div></div><div class="stats"><div class="stat"><span style="font-size:25px">👥</span><div><strong id="gc">0</strong><span class="muted">مجموعات محلية</span></div></div><div class="stat"><span style="font-size:25px">💬</span><div><strong id="mc">0</strong><span class="muted">رسائل محفوظة</span></div></div><div class="stat"><span style="font-size:25px">✨</span><div><strong id="ac">0</strong><span class="muted">أسئلة للمساعد</span></div></div></div><div class="card"><h2>ابدأ بسرعة</h2><div class="quickgrid"><div class="quick" onclick="page('ai')"><span style="font-size:24px">🧠</span><b>افهم سؤال</b><span class="muted">اطلب شرحًا مبسطًا.</span></div><div class="quick" onclick="page('groups')"><span style="font-size:24px">🫂</span><b>اعمل مجموعة</b><span class="muted">ذاكر مع أصحابك.</span></div><div class="quick" onclick="page('study')"><span style="font-size:24px">📝</span><b>اختبر نفسك</b><span class="muted">تدريب وتصحيح فوري.</span></div></div></div></section>
+<section class="page" id="ai"><div class="grid"><div class="card"><h2>🤖 المساعد التعليمي</h2><p class="muted">اكتب سؤالك واطلب شرح الفكرة، مش الإجابة بس.</p><div class="row"><div class="field"><label>المادة</label><select id="sub"><option>رياضيات</option><option>علوم</option><option>لغة عربية</option><option>برمجة</option><option>لغة إنجليزية</option><option>مادة أخرى</option></select></div><div class="field"><label>مستوى الشرح</label><select id="level"><option>بسيط جدًا</option><option selected>مناسب للإعدادي</option><option>تفصيلي</option></select></div></div><div class="field"><label>السؤال</label><textarea id="question" placeholder="مثال: مش فاهم الفرق بين التبخر والغليان..."></textarea></div><button class="btn primary" onclick="ask()">اشرح لي 💡</button><div class="answer" id="ans"></div></div><div class="card"><h2>💡 عشان تفهم أسرع</h2><p>١. اكتب السؤال كاملًا.</p><p>٢. وضّح الجزء اللي مش فاهمه.</p><p>٣. اطلب مثالًا مشابهًا.</p><p>٤. جرّب تحل بنفسك بعد الشرح.</p><button class="btn light" onclick="page('study')">اذهب للتدريبات ←</button></div></div></section>
+<section class="page" id="groups"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div><h2>👥 مجموعات المذاكرة</h2><p class="muted">أنشئ مجموعة تجريبية وابدأ محادثة محلية.</p></div><button class="btn primary" onclick="modal('create')">＋ إنشاء مجموعة</button></div><div class="chatlayout"><div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><h3>مجموعاتي</h3><button class="btn light" onclick="modal('join')">انضمام</button></div><div id="grouplist" class="group-list"></div></div><div class="card chat"><div class="chathead" id="chathead"><b>اختار مجموعة</b><div class="muted">رسائل المذاكرة</div></div><div class="messages" id="messages"><div class="muted">أنشئ مجموعة لتبدأ.</div></div><form class="send" id="sendform"><input id="msg" placeholder="اكتب رسالة..." disabled><button id="sendbtn" class="btn primary" disabled>إرسال</button></form></div></div><div class="card" id="modal" style="display:none"><h3 id="modtitle">إنشاء مجموعة</h3><div class="field"><label>اسم المجموعة</label><input id="gname" placeholder="مثال: مذاكرة علوم"></div><div class="field"><label>المادة</label><select id="gsubject"><option>عام</option><option>رياضيات</option><option>علوم</option><option>لغة عربية</option><option>برمجة</option><option>لغة إنجليزية</option></select></div><button id="modconfirm" class="btn primary">إنشاء</button> <button class="btn outline" onclick="closeModal()">إلغاء</button></div></section>
 <section class="page" id="study"><div class="grid"><div class="card"><h2>📝 اختبار سريع</h2><p id="qq">كم يساوي 7 × 8؟</p><div id="opts" style="display:grid;gap:8px"></div><p id="feedback"></p><button class="btn primary" onclick="nextq()">السؤال التالي</button></div><div class="card"><h2>📌 ملاحظاتي</h2><textarea id="notes" placeholder="اكتب ملخصك هنا..."></textarea><button class="btn primary" style="margin-top:10px" onclick="saveNotes()">حفظ الملاحظات</button><span class="muted" id="ns"></span></div></div></section>
-<section class="page" id="profile"><div class="card" style="max-width:600px"><h2>👤 حسابي</h2><p class="muted">اسم يظهر في رسائلك على هذا الجهاز.</p><div class="field"><label>اسمك أو لقبك</label><input id="uname" maxlength="30" placeholder="اكتب اسمك"></div><button class="btn primary" onclick="saveName()">حفظ الاسم</button><div class="note">لا يوجد تسجيل دخول أو مزامنة سحابية في هذه النسخة. لا تدخل معلومات حساسة.</div></div></section>
-</main><footer class="footer">EduSolve · نموذج أولي تعليمي</footer></div></div>
+<section class="page" id="profile"><div class="card" style="max-width:600px"><h2>👤 حسابي</h2><div class="field"><label>الاسم</label><input id="uname" maxlength="30"></div><div class="field"><label>البريد</label><input id="uemail" disabled></div><button class="btn primary" onclick="saveName()">حفظ الاسم</button> <button class="btn outline" onclick="logout()">تسجيل خروج</button></div></section>
+</main><footer class="footer">EduSolve · مربوط بـ Firebase</footer></div></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCVwwZcNpjks7YiS8BbeQ0L1grAlD-Hd38",
+  authDomain: "aducation-e5275.firebaseapp.com",
+  projectId: "aducation-e5275",
+  storageBucket: "aducation-e5275.firebasestorage.app",
+  messagingSenderId: "642329547889",
+  appId: "1:642329547889:web:8b8e99148efc87335837d0",
+  measurementId: "G-3SP8RB5W2L"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+window.loginGoogle = async () => {
+  const provider = new GoogleAuthProvider();
+  try { await signInWithPopup(auth, provider); } 
+  catch(e){ document.getElementById('authError').textContent = e.message; }
+};
+window.registerEmail = async () => {
+  const email = document.getElementById('loginemail').value.trim();
+  const pass = document.getElementById('loginpass').value;
+  if(!email || pass.length<6) return alert('اكتب ايميل وباسورد 6 حروف على الأقل');
+  try { await createUserWithEmailAndPassword(auth, email, pass); }
+  catch(e){ document.getElementById('authError').textContent = e.message; }
+};
+window.loginEmail = async () => {
+  const email = document.getElementById('loginemail').value.trim();
+  const pass = document.getElementById('loginpass').value;
+  try { await signInWithEmailAndPassword(auth, email, pass); }
+  catch(e){ document.getElementById('authError').textContent = e.message; }
+};
+window.logout = () => signOut(auth);
+
+onAuthStateChanged(auth, async (user)=>{
+  if(user){
+    document.getElementById('authgate').classList.add('hidden');
+    document.getElementById('welcomeText').textContent = `أهلًا يا ${user.displayName || user.email} 👋`;
+    document.getElementById('uname').value = user.displayName || '';
+    document.getElementById('uemail').value = user.email || '';
+    localStorage.setItem('esname', user.displayName || user.email.split('@')[0]);
+    // حفظ المستخدم في Firestore
+    try{
+      await setDoc(doc(db, "users", user.uid), {
+        uid: user.uid,
+        name: user.displayName || '',
+        email: user.email,
+        lastLogin: serverTimestamp()
+      }, {merge:true});
+    }catch(e){ console.log(e); }
+  } else {
+    document.getElementById('authgate').classList.remove('hidden');
+  }
+});
+
+window.saveName = async () => {
+  const newName = document.getElementById('uname').value.trim();
+  if(!newName) return;
+  if(auth.currentUser){
+    await updateProfile(auth.currentUser, {displayName: newName});
+    await setDoc(doc(db, "users", auth.currentUser.uid), {name: newName}, {merge:true});
+  }
+  localStorage.setItem('esname', newName);
+  alert('تم حفظ الاسم');
+};
+</script>
+
 <script>
 const $=x=>document.getElementById(x), titles={home:'الرئيسية',ai:'المساعد الذكي',groups:'مجموعات المذاكرة',study:'المذاكرة',profile:'حسابي'};
-function page(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));$(p).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));$('title').textContent=titles[p];if(p==='groups')renderGroups();if(p==='profile')$('uname').value=username;window.scrollTo(0,0)}
+function page(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));$(p).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));$('title').textContent=titles[p];if(p==='groups')renderGroups();if(p==='profile'){}window.scrollTo(0,0)}
 document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>page(b.dataset.page));
 function theme(){document.body.classList.toggle('dark');localStorage.setItem('esdark',document.body.classList.contains('dark')?'1':'0')}if(localStorage.getItem('esdark')==='1')document.body.classList.add('dark');
 let username=localStorage.getItem('esname')||'طالب', groups=JSON.parse(localStorage.getItem('esgroups')||'[]'), msgs=JSON.parse(localStorage.getItem('esmsgs')||'{}'), current=null, asked=+(localStorage.getItem('esasked')||0);
 function stats(){$('gc').textContent=groups.length;$('mc').textContent=Object.values(msgs).reduce((a,x)=>a+x.length,0);$('ac').textContent=asked}
-function modal(mode){$('modal').style.display='block';$('modtitle').textContent=mode==='create'?'إنشاء مجموعة':'انضمام لمجموعة على هذا الجهاز';$('modhint').textContent=mode==='create'?'ستكون المجموعة محفوظة في هذا المتصفح فقط.':'اكتب اسم مجموعة موجودة على نفس الجهاز.';$('modconfirm').textContent=mode==='create'?'إنشاء':'انضمام';$('modconfirm').onclick=mode==='create'?createGroup:joinGroup;$('gname').value='';$('modal').scrollIntoView({behavior:'smooth',block:'center'})}
+function modal(mode){$('modal').style.display='block';$('modtitle').textContent=mode==='create'?'إنشاء مجموعة':'انضمام لمجموعة على هذا الجهاز';$('modconfirm').textContent=mode==='create'?'إنشاء':'انضمام';$('modconfirm').onclick=mode==='create'?createGroup:joinGroup;$('gname').value='';}
 function closeModal(){$('modal').style.display='none'}
 function saveData(){localStorage.setItem('esgroups',JSON.stringify(groups));localStorage.setItem('esmsgs',JSON.stringify(msgs));stats()}
 function createGroup(){let name=$('gname').value.trim();if(!name)return alert('اكتب اسم المجموعة.');let id='g'+Math.random().toString(36).slice(2,8);groups.push({id,name,subject:$('gsubject').value,code:String(Math.floor(100000+Math.random()*900000))});msgs[id]=[{name:'النظام',text:'أهلًا! ابدأوا مشاركة الأسئلة والشرح هنا.',time:clock()}];current=id;saveData();closeModal();renderGroups()}
-function joinGroup(){let name=$('gname').value.trim(),g=groups.find(x=>x.name.toLowerCase()===name.toLowerCase());if(g){current=g.id;closeModal();renderGroups()}else alert('مش موجودة على هذا الجهاز. الانضمام من أجهزة أصحابك يحتاج ربط الموقع بقاعدة بيانات أونلاين.')}
+function joinGroup(){let name=$('gname').value.trim(),g=groups.find(x=>x.name.toLowerCase()===name.toLowerCase());if(g){current=g.id;closeModal();renderGroups()}else alert('مش موجودة على هذا الجهاز.')}
 function clock(){return new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'})}
-function renderGroups(){let box=$('grouplist');box.innerHTML='';if(!groups.length){box.innerHTML='<p class="muted">لسه مفيش مجموعات. اضغط إنشاء مجموعة.</p>';current=null;renderChat();return}groups.forEach(g=>{let b=document.createElement('button');b.className='groupbtn'+(g.id===current?' active':'');b.textContent='👥 '+g.name+' · '+g.subject;b.onclick=()=>{current=g.id;renderGroups()};box.appendChild(b)});if(!current||!groups.some(g=>g.id===current))current=groups[0].id;renderChat();stats()}
-function renderChat(){let g=groups.find(x=>x.id===current),box=$('messages');box.innerHTML='';if(!g){$('chathead').innerHTML='<b>اختار مجموعة</b><div class="muted">رسائل المذاكرة</div>';$('msg').disabled=$('sendbtn').disabled=true;box.innerHTML='<p class="muted">أنشئ مجموعة لتبدأ.</p>';return}$('chathead').innerHTML='<b></b><div class="muted"></div>'; $('chathead').querySelector('b').textContent=g.name;$('chathead').querySelector('.muted').textContent=g.subject+' · كود: '+(g.code||'غير متاح')+' · محلية على هذا الجهاز';(msgs[g.id]||[]).forEach(m=>{let b=document.createElement('div');b.className='bubble'+(m.name===username?' mine':'');let t=document.createElement('div');t.textContent=m.text;let s=document.createElement('small');s.textContent=m.name+' · '+m.time;b.append(t,s);box.appendChild(b)});box.scrollTop=box.scrollHeight;
-let tools=document.createElement('div');tools.className='roomtools';
-let copyCode=document.createElement('button');copyCode.className='btn light';copyCode.textContent='نسخ كود الغرفة';copyCode.onclick=()=>copyRoom(g.code||'');
-let copyLink=document.createElement('button');copyLink.className='btn outline';copyLink.textContent='نسخ رابط الدعوة';copyLink.onclick=()=>copyRoom(location.href.split('#')[0]+'#room='+encodeURIComponent(g.code||''));
-tools.append(copyCode,copyLink);$('chathead').appendChild(tools);
-$('msg').disabled=$('sendbtn').disabled=false}
+function renderGroups(){let box=$('grouplist');box.innerHTML='';if(!groups.length){box.innerHTML='<p class="muted">لسه مفيش مجموعات.</p>';current=null;renderChat();return}groups.forEach(g=>{let b=document.createElement('button');b.className='groupbtn'+(g.id===current?' active':'');b.textContent='👥 '+g.name+' · '+g.subject;b.onclick=()=>{current=g.id;renderGroups()};box.appendChild(b)});if(!current||!groups.some(g=>g.id===current))current=groups[0].id;renderChat();stats()}
+function renderChat(){let g=groups.find(x=>x.id===current),box=$('messages');box.innerHTML='';if(!g){$('chathead').innerHTML='<b>اختار مجموعة</b>';$('msg').disabled=$('sendbtn').disabled=true;return}$('chathead').innerHTML='<b>'+g.name+'</b><div class="muted">'+g.subject+' · كود: '+g.code+'</div>';(msgs[g.id]||[]).forEach(m=>{let b=document.createElement('div');b.className='bubble'+(m.name===username?' mine':'');b.innerHTML='<div>'+m.text+'</div><small>'+m.name+' · '+m.time+'</small>';box.appendChild(b)});box.scrollTop=box.scrollHeight;$('msg').disabled=$('sendbtn').disabled=false}
 $('sendform').onsubmit=e=>{e.preventDefault();let text=$('msg').value.trim();if(!text||!current)return;msgs[current]=msgs[current]||[];msgs[current].push({name:username,text,time:clock()});$('msg').value='';saveData();renderGroups()};
-function saveName(){let n=$('uname').value.trim();if(!n)return alert('اكتب اسمًا');username=n;localStorage.setItem('esname',n);renderChat();alert('تم حفظ الاسم على هذا الجهاز.')}
-function ask(){let q=$('question').value.trim(),s=$('sub').value;if(!q)return alert('اكتب السؤال الأول');let a='';if(s==='رياضيات'){let m=q.match(/(-?\d+(?:\.\d+)?)\s*([+×x*÷/\-])\s*(-?\d+(?:\.\d+)?)/);if(m){let x=+m[1],y=+m[3],op=m[2],r;switch(op){case '+':r=x+y;break;case '-':r=x-y;break;case '×':case 'x':case '*':r=x*y;break;case '÷':case '/':r=y===0?'لا يمكن القسمة على صفر':x/y;break}a=`نحل خطوة بخطوة:\n١) الأعداد هي ${x} و${y}.\n٢) العملية هي ${op}.\n٣) الناتج هو ${r}.\nراجع إن كان السؤال يحتوي على خطوات إضافية.`}else if(/س.?²?\s*[-−]\s*9|x\^?2\s*-\s*9/i.test(q))a='ده فرق بين مربعين:\nس² − 9 = س² − 3²\nالقاعدة: أ² − ب² = (أ − ب)(أ + ب)\nإذن الناتج: (س − 3)(س + 3).';else a='حدد المعطيات والمطلوب، ثم اختر القاعدة المناسبة وطبّقها خطوة بخطوة. النسخة الحالية لا تفهم كل المسائل تلقائيًا؛ جرّب كتابة عملية حسابية واضحة.'}else if(s==='علوم'&&/تبخر|غليان/.test(q))a='التبخر يحدث من سطح السائل ويمكن أن يحدث في درجات حرارة مختلفة. الغليان يحدث في السائل كله عند الوصول لدرجة الغليان المناسبة للضغط وتظهر فقاعات داخله.';else if(s==='لغة عربية'&&/فاعل/.test(q))a='الفاعل اسم مرفوع يدل على من قام بالفعل. مثال: «كتب الطالبُ الدرسَ»؛ الطالبُ هو الفاعل.';else if(s==='برمجة'&&/h1/i.test(q))a='وسم <h1> يُستخدم للعنوان الرئيسي في HTML، مثل: <h1>عنوان الصفحة</h1>. HTML للهيكل، وCSS للتنسيق، وJavaScript للتفاعل.';else a='عشان تفهم السؤال:\n١) اقرأ المطلوب وحدد الكلمات المهمة.\n٢) اكتب المعطيات.\n٣) جرّب حلًا أوليًا.\n٤) اطلب شرح الجزء اللي وقف معاك.\n\nهذه نسخة أولية وليست متصلة بذكاء اصطناعي حقيقي، لذلك قد لا تجيب عن سؤالك المحدد.';if($('level').value==='بسيط جدًا')a+='\nببساطة: خُد كل خطوة لوحدها ومتنتقلش للي بعدها إلا لما تفهمها.';if($('level').value==='تفصيلي')a+='\nللمراجعة: اكتب الفكرة بكلماتك ثم حل مثالًا مشابهًا بنفسك.';$('ans').textContent=a;$('ans').classList.add('show');asked++;localStorage.setItem('esasked',asked);stats()}
-const quiz=[['كم يساوي 7 × 8؟',['54','56','64'],1,'7 × 8 = 56.'],['ما الكوكب الأحمر؟',['الزهرة','المريخ','المشتري'],1,'المريخ يبدو أحمر بسبب أكاسيد الحديد على سطحه.'],['ما ناتج 15 + 27؟',['32','42','52'],1,'15 + 27 = 42.'],['أي وسم HTML للعنوان الرئيسي؟',['<p>','<h1>','<img>'],1,'وسم h1 يمثل العنوان الرئيسي.']];let qi=0,done=false;function drawq(){let q=quiz[qi];$('qq').textContent=q[0];$('feedback').textContent='';$('opts').innerHTML='';done=false;q[1].forEach((v,i)=>{let b=document.createElement('button');b.className='btn outline';b.textContent=v;b.onclick=()=>{if(done)return;done=true;$('feedback').textContent=(i===q[2]?'✅ صحيح! ':'❌ حاول مرة أخرى. ')+q[3];$('feedback').style.color=i===q[2]?'#0a9':'#d44'};$('opts').appendChild(b)})}function nextq(){qi=(qi+1)%quiz.length;drawq()}drawq();$('notes').value=localStorage.getItem('esnotes')||'';function saveNotes(){localStorage.setItem('esnotes',$('notes').value);$('ns').textContent='تم الحفظ على الجهاز ✓'}
-function providerInfo(name){alert('تسجيل الدخول الحقيقي باستخدام '+name+' يحتاج إعداد Firebase وتفعيل مزوّد الدخول من لوحة Firebase. الواجهة الحالية نموذج تجريبي فقط.')}
-function demoRequest(){
- const n=$('loginname').value.trim(),e=$('loginemail').value.trim();
- if(!n||!e||!e.includes('@')){alert('اكتب الاسم وبريدًا إلكترونيًا صحيحًا للتجربة.');return}
- localStorage.setItem('es_pending_name',n);localStorage.setItem('es_pending_email',e);
- $('approvalarea').style.display='block';
-}
-function whatsappRequest(){
- const n=localStorage.getItem('es_pending_name')||'طالب',e=localStorage.getItem('es_pending_email')||'';
- const msg=encodeURIComponent('طلب تفعيل حساب EduSolve%0Aالاسم: '+n+'%0Aالبريد: '+e+'%0Aمن فضلك أرسل كود الموافقة.');
- // Replace this placeholder with the administrator's WhatsApp number in international format.
- const adminNumber='201000000000';
- window.open('https://wa.me/'+adminNumber+'?text='+msg,'_blank');
- alert('غيّر رقم واتساب التجريبي داخل الكود إلى رقم المسؤول الصحيح قبل نشر الموقع.');
-}
-function demoApprove(){
- // Demo-only gate. Do NOT use a fixed client-side code in a public/production website.
- if($('approvalcode').value.trim()!=='7000'){alert('الكود غير صحيح.');return}
- username=localStorage.getItem('es_pending_name')||'طالب';localStorage.setItem('esname',username);localStorage.setItem('es_demo_ok','1');
- $('authgate').classList.add('hidden');alert('تم الدخول التجريبي. في النسخة الحقيقية يجب التحقق من الكود على الخادم، وليس داخل المتصفح.');
-}
-function copyRoom(value){if(navigator.clipboard&&location.protocol!=='file:'){navigator.clipboard.writeText(value).then(()=>alert('تم النسخ!')).catch(()=>prompt('انسخ النص:',value))}else prompt('انسخ النص:',value)}
-window.addEventListener('load',()=>{
- if(localStorage.getItem('es_demo_ok')==='1')$('authgate').classList.add('hidden');
- if(location.hash.startsWith('#room=')){const c=decodeURIComponent(location.hash.slice(6));$('authgate').classList.remove('hidden');}
-});
-
+function ask(){let q=$('question').value.trim(),s=$('sub').value;if(!q)return alert('اكتب السؤال');let a='عشان تفهم:\n١) اقرأ المطلوب وحدد الكلمات المهمة.\n٢) اكتب المعطيات.\n٣) جرّب حلًا أوليًا.';if(s==='رياضيات'&&/س.?²?\s*-\s*9|x\^?2\s*-\s*9/i.test(q))a='ده فرق بين مربعين: س² − 9 = (س − 3)(س + 3).';$('ans').textContent=a;$('ans').classList.add('show');asked++;localStorage.setItem('esasked',asked);stats()}
+const quiz=[['كم يساوي 7 × 8؟',['54','56','64'],1,'7 × 8 = 56.'],['ما الكوكب الأحمر؟',['الزهرة','المريخ','المشتري'],1,'المريخ أحمر.'],['ما ناتج 15 + 27؟',['32','42','52'],1,'42'],['أي وسم HTML للعنوان؟',['<p>','<h1>','<img>'],1,'h1']];let qi=0,done=false;function drawq(){let q=quiz[qi];$('qq').textContent=q[0];$('feedback').textContent='';$('opts').innerHTML='';done=false;q[1].forEach((v,i)=>{let b=document.createElement('button');b.className='btn outline';b.textContent=v;b.onclick=()=>{if(done)return;done=true;$('feedback').textContent=(i===q[2]?'✅ صحيح! ':'❌ ')+q[3];};$('opts').appendChild(b)})}function nextq(){qi=(qi+1)%quiz.length;drawq()}drawq();$('notes').value=localStorage.getItem('esnotes')||'';function saveNotes(){localStorage.setItem('esnotes',$('notes').value);$('ns').textContent='تم الحفظ ✓'}
 stats();renderGroups();
 </script></body></html>
